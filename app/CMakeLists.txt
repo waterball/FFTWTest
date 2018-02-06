@@ -38,10 +38,10 @@ find_library( # Sets the name of the path variable.
 
 #add_library(fftw3f STATIC IMPORTED)
 #set_target_properties(fftw3f PROPERTIES IMPORTED_LOCATION
-#                    ${CMAKE_SOURCE_DIR}/libs/libfftw3f.a)
+#                    ${CMAKE_SOURCE_DIR}/libs/libfftw3f-neon.a)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-target_link_libraries(native-fftw ${CMAKE_SOURCE_DIR}/libs/libfftw3f.a)
+target_link_libraries(native-fftw ${CMAKE_SOURCE_DIR}/libs/libfftw3f-neon.a)
 
 target_link_libraries( # Specifies the target library.
                        native-fftw
