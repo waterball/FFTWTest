@@ -11,7 +11,7 @@ Java_meicam_com_fftwtest_MainActivity_stringFromJNI(
 
     int size = 32;
     float *in = (float *)fftwf_malloc(size * size * sizeof(float));
-    fftwf_complex *out = (fftwf_complex *)fftwf_malloc(size * (size+2) * sizeof(float));
+    fftwf_complex *out = (fftwf_complex *)fftwf_malloc(size * ((size / 2 + 1) * 2) * sizeof(float));
     fftwf_plan p = fftwf_plan_dft_r2c_2d(size, size, in, out, FFTW_ESTIMATE);
 
     timeval begin, end;
